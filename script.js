@@ -12,8 +12,10 @@ submitButton.addEventListener("click", ()=>{
     let monthValue = monthInput.value;
     let yearValue = yearInput.value;   
 
-    validateInput(dateValue, monthValue, yearValue);     
-    calculateAge(`${yearValue}-${monthValue}-${dateValue}`);
+    if(!validateInput(dateValue, monthValue, yearValue)){
+        calculateAge(`${yearValue}-${monthValue}-${dateValue}`);
+    }     
+    
 })
 
 function validateInput(dateValue, monthValue, yearValue){
@@ -22,20 +24,20 @@ function validateInput(dateValue, monthValue, yearValue){
         dateInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Enter a Valid Day and Ensure Day Field is not empty";
         errorParagraph.style.color = "red";
-        return;
+        return false;
     }
 
     if(monthValue === ""){
         monthInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Select a Valid Month";
-        return;
+        return false;
     }
 
     if(yearValue === "" || yearValue.length > 4){
         yearInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Enter a Valid Year and Ensure Year Field is not empty";
         errorParagraph.style.color = "red";
-        return;
+        return false;
     }
 
 }
