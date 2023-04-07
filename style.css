@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    background: skyblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calculator-body{
+    /* width: 80%; */
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 30px 20px;
+    color: navy;
+}
+
+.header{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.main-calculator{
+    display: flex;
+}
+
+.main-calculator div{
+    margin: 10px;
+}
+.main-calculator div label{
+    display: flex;
+}
+
+.main-calculator div input, .main-calculator div select{
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+.main-calculator div input:focus{
+    outline: blue;
+    border: 1px solid blue;
+}
+
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: navy;
+    padding: 20px 60px;
+    font-size: 15px;
+    border: none;
+    border-radius:5px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: blue;
+}
+
+/* Media Queries for mobile Device */
+@media only screen and (max-width: 600px) {
+    .main-calculator div input, .main-calculator div select{
+        width: 100%;
+    }
+    .calculator-body{
+        width: 80%;
+    }
+
+    .main-calculator{
+        display: inline;
+    }
+    
+  }
