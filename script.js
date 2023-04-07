@@ -24,20 +24,20 @@ function validateInput(dateValue, monthValue, yearValue){
         dateInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Enter a Valid Day and Ensure Day Field is not empty";
         errorParagraph.style.color = "red";
-        return false;
+        return true;
     }
 
     if(monthValue === ""){
         monthInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Select a Valid Month";
-        return false;
+        return true;
     }
 
     if(yearValue === "" || yearValue.length > 4){
         yearInput.style.border = "1px solid red";
         errorParagraph.textContent = "Please Enter a Valid Year and Ensure Year Field is not empty";
         errorParagraph.style.color = "red";
-        return false;
+        return true;
     }
 
 }
